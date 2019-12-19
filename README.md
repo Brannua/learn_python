@@ -252,3 +252,24 @@ a == b --> False( 序列有序 )
 a is b --> False( 地址不同 )
 ```
 
+> 判断值的类型
+```
+@variable 传入的变量
+@vType 变量类型
+@vTypes 一堆变量类型 { 用来判断传入的变量是否是vTypes中类型的其中一种 }
+@bool 返回值类型是布尔
+isinstance(variable, vType): bool
+isinstance(variable, (vTypes...)): bool
+```
+- eg.
+```
+a = 'hello'
+isinstance(a, str) --> True
+isinstance(a, (int, str, float)) --> True
+isinstance(a, (int, float)) --> False
+```
+
+- 对象的三个特征
+  - 值
+  - 地址
+  - 类型
